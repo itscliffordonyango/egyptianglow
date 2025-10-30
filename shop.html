@@ -105,9 +105,19 @@
   </footer>
 
   <script>
+  document.addEventListener("DOMContentLoaded", () => {
     feather.replace();
 
-    // Product data grouped by category
+    // ✅ Mobile menu toggle (for small screens)
+    const menuButton = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("mobile-menu");
+    if (menuButton && menu) {
+      menuButton.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+
+    // ✅ Product data grouped by category
     const categories = {
       "Face Products": [
         { id: 1, name: "Face Cream", price: 1800, image: "static/face-cream.jpg" },
@@ -129,12 +139,12 @@
       "Special Products": [
         { id: 10, name: "Egyptian Secret Serum", price: 2000, image: "static/serum.jpg" },
         { id: 11, name: "Pyramid Lip Balm", price: 500, image: "static/hand.jpg" },
-      ]
+      ],
     };
 
     const shopSections = document.getElementById("shop-sections");
 
-    // Render each category section
+    // ✅ Render each category section
     Object.entries(categories).forEach(([categoryName, items]) => {
       const section = document.createElement("div");
       section.className = "mb-16";
@@ -142,11 +152,13 @@
         <h3 class="text-2xl font-serif font-semibold mb-6 border-b border-glow-pink pb-2">${categoryName}</h3>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           ${items.map(item => `
-            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+            <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition transform hover:-translate-y-1">
               <img src="${item.image}" alt="${item.name}" class="w-full h-56 object-cover rounded-lg mb-4">
               <h4 class="font-medium text-lg mb-2">${item.name}</h4>
               <p class="text-glow-dark mb-4">KSh ${item.price}</p>
-              <button class="bg-glow-dark text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition" onclick="addToCart(${item.id}, '${categoryName}')">Add to Cart</button>
+              <button class="bg-glow-dark text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition" onclick="addToCart(${item.id})">
+                Add to Cart
+              </button>
             </div>
           `).join('')}
         </div>
@@ -154,8 +166,8 @@
       shopSections.appendChild(section);
     });
 
-    // Add to cart logic
-    function addToCart(id) {
+    // ✅ Add to cart logic
+    window.addToCart = function (id) {
       const allProducts = Object.values(categories).flat();
       const product = allProducts.find(p => p.id === id);
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -167,16 +179,20 @@
       localStorage.setItem("cart", JSON.stringify(cart));
       updateCartCount();
       alert(`${product.name} added to cart!`);
-    }
+    };
 
-    // Update cart badge
+    // ✅ Update cart badge
     function updateCartCount() {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       const count = cart.reduce((t, i) => t + i.quantity, 0);
       document.getElementById("cart-count").textContent = count;
+      const mobileBadge = document.getElementById("mobile-cart-count");
+      if (mobileBadge) mobileBadge.textContent = count;
     }
 
     updateCartCount();
-  </script>
+  });
+</script>
+
 </body>
 </html>
