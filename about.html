@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | EgyptianGlow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'glow-pink': '#FFE8F5',
+            'glow-gold': '#FFD700',
+            'glow-dark': '#5E2E53',
+          },
+          fontFamily: {
+            sans: ['"Poppins"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-white text-glow-dark">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="text-2xl font-serif font-semibold text-glow-dark">EgyptianGlow</div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-center space-x-4">
+            <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Home</a>
+            <a href="shop.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Shop</a>
+            <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">About</a>
+            <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Contact</a>
+            <a href="cart2.html" class="relative p-2 rounded-full bg-glow-pink">
+              <i data-feather="shopping-cart"></i>
+              <span id="cart-count" class="absolute -top-1 -right-1 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+            </a>
+          </div>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-glow-pink">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Home</a>
+        <a href="shop.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Shop</a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">About</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Contact</a>
+        <a href="cart2.html" class="block px-3 py-2 rounded-md text-base font-medium bg-glow-pink flex items-center">
+          Cart <span id="mobile-cart-count" class="ml-2 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="py-16 text-center max-w-3xl mx-auto px-6">
+    <h1 class="text-3xl font-serif font-semibold text-glow-dark mb-6">Our Story</h1>
+    <p class="text-gray-700 mb-6 leading-relaxed">
+      EgyptianGlow was founded in Kenya with one mission: to help women feel confident in their own natural beauty.  
+      Our products are carefully curated to provide glowing, radiant skin — because every woman deserves to shine beautifully.
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      We believe in affordable luxury, high quality, and genuine self-care.  
+      Whether you shop online or visit our pickup point in Nairobi’s CBD, we’re always ready to help you glow!
+    </p>
+  </section>
+
+<footer class="bg-glow-dark text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-serif text-xl mb-4">EgyptianGlow</h3>
+          <p class="text-sm opacity-80">Natural beauty products for your radiant glow</p>
+        </div>
+        <div>
+          <h4 class="font-serif mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm opacity-80 hover:opacity-100">Home</a></li>
+            <li><a href="shop.html" class="text-sm opacity-80 hover:opacity-100">Shop</a></li>
+            <li><a href="index.html#about" class="text-sm opacity-80 hover:opacity-100">About</a></li>
+            <li><a href="index.html#contact" class="text-sm opacity-80 hover:opacity-100">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif mb-4">Connect With Us</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/skincare_healthtipskenya/" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+              <i data-feather="instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/100316878614173?ref=_xav_ig_profile_page_web" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+              <i data-feather="facebook"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+              <i data-feather="twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white border-opacity-20 mt-8 pt-6 text-sm text-center opacity-70">
+        <p>&copy; 2023 EgyptianGlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    feather.replace();
+    document.getElementById('mobile-menu-button').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    const updateCartCount = () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = cart.reduce((t, i) => t + (i.quantity || 1), 0);
+      document.getElementById('cart-count').textContent = count;
+      document.getElementById('mobile-cart-count').textContent = count;
+    };
+    updateCartCount();
+  </script>
+</body>
+</html>

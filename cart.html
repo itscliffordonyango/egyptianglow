@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | EgyptianGlow</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'glow-pink': '#FFE8F5',
+              'glow-gold': '#FFD700',
+              'glow-dark': '#5E2E53',
+            },
+            fontFamily: {
+              sans: ['"Poppins"', 'sans-serif'],
+              serif: ['"Playfair Display"', 'serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap');
+      
+      .empty-cart-btn:hover {
+        background-color: #f87171;
+      }
+    </style>
+</head>
+<body class="font-sans bg-white text-glow-dark">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <div class="text-2xl font-serif font-semibold text-glow-dark">EgyptianGlow</div>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-center space-x-4">
+            <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Home</a>
+            <a href="shop.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Shop</a>
+            <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">About</a>
+            <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Contact</a>
+            <a href="#" class="relative p-2 rounded-full bg-glow-pink">
+              <i data-feather="shopping-cart"></i>
+              <span id="cart-count" class="absolute -top-1 -right-1 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+            </a>
+          </div>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-glow-pink">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Home</a>
+        <a href="shop.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Shop</a>
+        <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">About</a>
+        <a href="index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Contact</a>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium bg-glow-pink flex items-center">
+          Cart <span id="mobile-cart-count" class="ml-2 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Header -->
+  <section class="py-12 bg-glow-pink bg-opacity-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-4xl font-serif font-bold mb-4">Your Shopping Cart</h1>
+      <p class="text-lg">Review your selected items before checkout</p>
+    </div>
+  </section>
+
+  <!-- Cart Content -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+          <!-- Cart Items -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden mb-6" id="cart-items-container">
+            <!-- Cart items will be loaded here via JavaScript -->
+            <div class="p-8 text-center" id="empty-cart-message">
+              <i data-feather="shopping-cart" class="mx-auto w-12 h-12 text-gray-300 mb-4"></i>
+              <h3 class="text-lg font-medium mb-2">Your cart is empty</h3>
+              <p class="text-sm text-gray-500 mb-4">Browse our products and add some items to your cart</p>
+              <a href="shop.html" class="inline-block bg-glow-pink px-6 py-2 rounded-full text-sm font-medium">Continue Shopping</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Order Summary -->
+        <div>
+          <div class="bg-white rounded-xl shadow-md p-6 sticky top-6">
+            <h3 class="font-serif text-xl mb-6">Order Summary</h3>
+            
+            <div class="space-y-4">
+              <div class="flex justify-between">
+                <span>Subtotal</span>
+                <span id="subtotal">KSh 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Delivery</span>
+                <span>Calculated at checkout</span>
+              </div>
+              <div class="border-t border-gray-200 my-3"></div>
+              <div class="flex justify-between font-medium">
+                <span>Total</span>
+                <span id="total">KSh 0</span>
+              </div>
+            </div>
+            
+            <div class="mt-6 space-y-4" id="checkout-buttons">
+              <button 
+                onclick="checkoutWhatsApp()"
+                class="w-full py-3 bg-glow-dark text-white rounded-full font-medium hover:bg-opacity-90 transition-colors flex items-center justify-center"
+                disabled
+              >
+                <i data-feather="message-circle" class="mr-2"></i>
+                Checkout via WhatsApp
+              </button>
+              <a 
+                href="shop.html" 
+                class="block w-full py-3 bg-white border border-glow-dark text-glow-dark rounded-full font-medium text-center hover:bg-glow-pink transition-colors"
+              >
+                Continue Shopping
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-glow-dark text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-serif text-xl mb-4">EgyptianGlow</h3>
+          <p class="text-sm opacity-80">Natural beauty products for your radiant glow</p>
+        </div>
+        <div>
+          <h4 class="font-serif mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm opacity-80 hover:opacity-100">Home</a></li>
+            <li><a href="shop.html" class="text-sm opacity-80 hover:opacity-100">Shop</a></li>
+            <li><a href="index.html#about" class="text-sm opacity-80 hover:opacity-100">About</a></li>
+            <li><a href="index.html#contact" class="text-sm opacity-80 hover:opacity-100">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif mb-4">Connect With Us</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/skincare_healthtipskenya/" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+              <i data-feather="instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/100316878614173?ref=_xav_ig_profile_page_web" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+              <i data-feather="facebook"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+              <i data-feather="twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white border-opacity-20 mt-8 pt-6 text-sm text-center opacity-70">
+        <p>&copy; 2023 EgyptianGlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/254721501977?text=Hello%20EgyptianGlow%2C%20I%20would%20like%20to%20place%20an%20order" class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
+      <i data-feather="message-circle" class="text-white"></i>
+    </a>
+  </div>
+
+<script>
+  // Initialize cart
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Function to render cart
+  function renderCart() {
+    const container = document.getElementById('cart-items-container');
+    const emptyMessage = document.getElementById('empty-cart-message');
+    const checkoutBtn = document.querySelector('#checkout-buttons button');
+    
+    if (cart.length === 0) {
+      container.innerHTML = '';
+      emptyMessage.classList.remove('hidden');
+      container.appendChild(emptyMessage);
+      checkoutBtn.disabled = true;
+      updateOrderSummary();
+      return;
+    }
+
+    container.innerHTML = '';
+    emptyMessage.classList.add('hidden');
+
+    cart.forEach(item => {
+      const cartItem = document.createElement('div');
+      cartItem.className = 'flex items-center p-4 border-b border-gray-100';
+      cartItem.innerHTML = `
+        <div class="flex-shrink-0 w-20 h-20 bg-gray-100 rounded-lg overflow-hidden">
+          <img src="http://static.photos/beauty/200x200/${item.id}" alt="${item.name}" class="w-full h-full object-cover">
+        </div>
+        <div class="ml-4 flex-1">
+          <h4 class="font-medium">${item.name}</h4>
+          <p class="text-sm text-gray-500">KSh ${item.price.toLocaleString()}</p>
+        </div>
+        <div class="flex items-center">
+          <button onclick="updateQuantity(${item.id}, -1)" class="w-8 h-8 rounded-full border flex items-center justify-center hover:bg-glow-pink">
+            <i data-feather='minus' class='w-4 h-4'></i>
+          </button>
+          <span class="mx-2">${item.quantity}</span>
+          <button onclick="updateQuantity(${item.id}, 1)" class="w-8 h-8 rounded-full border flex items-center justify-center hover:bg-glow-pink">
+            <i data-feather='plus' class='w-4 h-4'></i>
+          </button>
+        </div>
+        <div class="ml-6">
+          <p class="font-medium">KSh ${(item.price * item.quantity).toLocaleString()}</p>
+        </div>
+        <button onclick="removeFromCart(${item.id})" class="ml-4 text-gray-400 hover:text-red-500">
+          <i data-feather='trash-2' class='w-5 h-5'></i>
+        </button>
+      `;
+      container.appendChild(cartItem);
+    });
+
+    // Empty Cart Button
+    const emptyCartBtn = document.createElement('button');
+    emptyCartBtn.className = 'empty-cart-btn w-full py-3 bg-gray-100 text-red-500 rounded-b-lg font-medium hover:bg-opacity-80 transition-colors';
+    emptyCartBtn.innerHTML = "<i data-feather='trash-2' class='inline mr-2 w-4 h-4'></i> Empty Cart";
+    emptyCartBtn.onclick = emptyCart;
+    container.appendChild(emptyCartBtn);
+
+    checkoutBtn.disabled = false;
+    updateOrderSummary();
+    feather.replace();
+  }
+
+  // Update quantity
+  function updateQuantity(productId, change) {
+    const item = cart.find(i => i.id === productId);
+    if (!item) return;
+    item.quantity += change;
+
+    if (item.quantity <= 0) {
+      cart = cart.filter(i => i.id !== productId);
+    }
+
+    saveCart();
+    renderCart();
+    updateCartCount();
+  }
+
+  // Remove item
+  function removeFromCart(productId) {
+    cart = cart.filter(i => i.id !== productId);
+    saveCart();
+    renderCart();
+    updateCartCount();
+  }
+
+  // Empty entire cart
+  function emptyCart() {
+    cart = [];
+    saveCart();
+    renderCart();
+    updateCartCount();
+  }
+
+  // ✅ Update subtotal & total dynamically
+  function updateOrderSummary() {
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    document.getElementById('subtotal').textContent = `KSh ${subtotal.toLocaleString()}`;
+    document.getElementById('total').textContent = `KSh ${subtotal.toLocaleString()}`;
+  }
+
+  // Checkout via WhatsApp
+  function checkoutWhatsApp() {
+    if (cart.length === 0) return;
+
+    const productList = cart.map(item => `${item.name} (${item.quantity}x)`).join(', ');
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+    const message = encodeURIComponent(
+      `Hello EgyptianGlow 👑,\n\nI want to purchase the following products:\n${productList}\n\nTotal: KSh ${total.toLocaleString()}\n\nMy details:\nName:\nPhone:\nDelivery Address:`
+    );
+
+    window.open(`https://wa.me/254721501977?text=${message}`, '_blank');
+  }
+
+  // Save to localStorage
+  function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  // Update cart count on nav
+  function updateCartCount() {
+    const count = cart.reduce((t, i) => t + i.quantity, 0);
+    document.getElementById('cart-count').textContent = count;
+    document.getElementById('mobile-cart-count').textContent = count;
+  }
+
+  // Mobile menu toggle
+  document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+
+  // Initialize on load
+  document.addEventListener('DOMContentLoaded', function() {
+    feather.replace();
+    renderCart();
+    updateCartCount();
+  });
+
+  
+</script>
+
+</body>
+</html>

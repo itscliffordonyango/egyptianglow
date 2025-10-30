@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --glow-pink: #FFE8F5;
+  --glow-gold: #FFD700;
+  --glow-dark: #5E2E53;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+.navbar a:hover {
+  background-color: var(--glow-pink);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--glow-pink);
+  color: var(--glow-dark);
+}
+
+/* Product Cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.add-btn {
+  background: var(--glow-dark);
+  color: white;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background: var(--glow-dark);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  background: #25D366;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Cart Page */
+.empty-cart-message {
+  text-align: center;
+  padding: 3rem;
+  color: gray;
+}
+
+.shop-btn {
+  display: inline-block;
+  background: var(--glow-pink);
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+}
+
+.order-summary {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+#checkout-btn {
+  width: 100%;
+  background: var(--glow-dark);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.continue-btn {
+  border: 1px solid var(--glow-dark);
+  color: var(--glow-dark);
+  padding: 0.8rem;
+  border-radius: 9999px;
+  display: block;
+  text-align: center;
+}

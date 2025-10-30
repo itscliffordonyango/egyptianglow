@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | EgyptianGlow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'glow-pink': '#FFE8F5',
+            'glow-gold': '#FFD700',
+            'glow-dark': '#5E2E53',
+          },
+          fontFamily: {
+            sans: ['"Poppins"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-white text-glow-dark">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="text-2xl font-serif font-semibold text-glow-dark">EgyptianGlow</div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-center space-x-4">
+            <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Home</a>
+            <a href="shop.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Shop</a>
+            <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">About</a>
+            <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Contact</a>
+            <a href="cart2.html" class="relative p-2 rounded-full bg-glow-pink">
+              <i data-feather="shopping-cart"></i>
+              <span id="cart-count" class="absolute -top-1 -right-1 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+            </a>
+          </div>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-glow-pink">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Shop Sections -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-serif font-semibold mb-8 text-center">Our Products</h2>
+
+      <div id="shop-sections"></div>
+    </div>
+  </section>
+
+
+  <!-- WhatsApp Float Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/254725835372?text=Hello%20EgyptianGlow%2C%20I%20would%20like%20to%20place%20an%20order" 
+   class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
+  <i data-feather="message-circle" class="text-white"></i>
+</a>
+  </div>
+
+
+  <footer class="bg-glow-dark text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-serif text-xl mb-4">EgyptianGlow</h3>
+          <p class="text-sm opacity-80">Natural beauty products for your radiant glow</p>
+        </div>
+        <div>
+          <h4 class="font-serif mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm opacity-80 hover:opacity-100">Home</a></li>
+            <li><a href="shop.html" class="text-sm opacity-80 hover:opacity-100">Shop</a></li>
+            <li><a href="index.html#about" class="text-sm opacity-80 hover:opacity-100">About</a></li>
+            <li><a href="index.html#contact" class="text-sm opacity-80 hover:opacity-100">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif mb-4">Connect With Us</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/skincare_healthtipskenya/" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+              <i data-feather="instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/100316878614173?ref=_xav_ig_profile_page_web" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+              <i data-feather="facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white border-opacity-20 mt-8 pt-6 text-sm text-center opacity-70">
+        <p>&copy; 2025 EgyptianGlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+
+    // Product data grouped by category
+    const categories = {
+      "Face Products": [
+        { id: 1, name: "Face Cream", price: 1800, image: "static/face-cream.jpg" },
+        { id: 2, name: "Sphinx Sunscreen", price: 900, image: "static/hand.jpg" },
+      ],
+      "Hand Products": [
+        { id: 3, name: "Pyramid Hand Cream", price: 700, image: "static/hand.jpg" },
+      ],
+      "Body Products": [
+        { id: 4, name: "Body Lightening Lotion", price: 1500, image: "static/lotion.jpg" },
+        { id: 5, name: "Advanced Body Lotion", price: 1200, image: "static/body.jpg" },
+        { id: 6, name: "Caramel Lotion", price: 1000, image: "static/lotion.jpg" },
+        { id: 7, name: "Hot Chocco Lotion", price: 1000, image: "static/solution.jpg" },
+      ],
+      "Soaps & Gels": [
+        { id: 8, name: "Turmeric Soap", price: 600, image: "static/serum.jpg" },
+        { id: 9, name: "Glow Shower Gel", price: 850, image: "static/body.jpg" },
+      ],
+      "Special Products": [
+        { id: 10, name: "Egyptian Secret Serum", price: 2000, image: "static/serum.jpg" },
+        { id: 11, name: "Pyramid Lip Balm", price: 500, image: "static/hand.jpg" },
+      ]
+    };
+
+    const shopSections = document.getElementById("shop-sections");
+
+    // Render each category section
+    Object.entries(categories).forEach(([categoryName, items]) => {
+      const section = document.createElement("div");
+      section.className = "mb-16";
+      section.innerHTML = `
+        <h3 class="text-2xl font-serif font-semibold mb-6 border-b border-glow-pink pb-2">${categoryName}</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          ${items.map(item => `
+            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+              <img src="${item.image}" alt="${item.name}" class="w-full h-56 object-cover rounded-lg mb-4">
+              <h4 class="font-medium text-lg mb-2">${item.name}</h4>
+              <p class="text-glow-dark mb-4">KSh ${item.price}</p>
+              <button class="bg-glow-dark text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition" onclick="addToCart(${item.id}, '${categoryName}')">Add to Cart</button>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      shopSections.appendChild(section);
+    });
+
+    // Add to cart logic
+    function addToCart(id) {
+      const allProducts = Object.values(categories).flat();
+      const product = allProducts.find(p => p.id === id);
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const existing = cart.find(i => i.id === id);
+
+      if (existing) existing.quantity++;
+      else cart.push({ ...product, quantity: 1 });
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      alert(`${product.name} added to cart!`);
+    }
+
+    // Update cart badge
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const count = cart.reduce((t, i) => t + i.quantity, 0);
+      document.getElementById("cart-count").textContent = count;
+    }
+
+    updateCartCount();
+  </script>
+</body>
+</html>
