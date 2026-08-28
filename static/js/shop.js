@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 1, name: "Lightening Face Cream", price: 2500, image: "static/products/face/face cream.jpeg" },
             { id: 2, name: "Royal Amber Face Cream", price: 2500, image: "static/products/face/royal amber.jpeg" },
             { id: 3, name: "Advanced Whyte Face Cream", price: 2500, image: "static/products/face/Advancedwhyte face cream.jpeg" },
-            { id: 4, name: "Xclusive Glow Face Cream", price: 2500, image: "static/products/face/face cream.jpeg" },
+            { id: 4, name: "Xclusive Glow Face Cream", price: 2500, image: "static/products/face/xclusive.png" },
             { id: 5, name: "Duches White Face Cream", price: 2500, image: "static/products/face/duches white.jpeg" },
             { id: 6, name: "Lightening Face Oil", price: 2500, image: "static/products/face/face-oil.jpeg" },
             { id: 7, name: "Pink Lip Cream", price: 1000, image: "static/products/face/Advancedwhyte face cream.jpeg" },
@@ -67,15 +67,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "Hand & Foot Products": [
             { id: 32, name: "Green Oil", price: 2500, image: "static/products/body/green-oil.jpeg" },
-            { id: 33, name: "Pink Knuckle Serum", price: 1000, image: "static/products/hand/pyramid lip balm.jpeg" },
-            { id: 34, name: "Orange Knuckle Cream", price: 1500, image: "static/products/hand/pyramid hand cream.jpeg" },
-            { id: 35, name: "Green Knuckle Cream", price: 1500, image: "static/products/hand/pyramid hand cream.jpeg" },
+            { id: 33, name: " Knuckle Set", price: 2500, image: "static/products/hand/knuckle-set.jpeg" },
+            // { id: 34, name: "Orange Knuckle Cream", price: 1500, image: "static/products/hand/pyramid hand cream.jpeg" },
+            // { id: 35, name: "Green Knuckle Cream", price: 1500, image: "static/products/hand/pyramid hand cream.jpeg" },
             { id: 36, name: "Instant Clarifying Knuckle Serum", price: 2500, image: "static/products/serums/knuckle-clarifying-serum.jpeg" },
-            { id: 37, name: "Hand and Foot Cream", price: 2000, image: "static/products/hand/pyramid hand cream.jpeg" },
+            // { id: 37, name: "Hand and Foot Cream", price: 2000, image: "static/products/hand/pyramid hand cream.jpeg" },
         ],
 
         "Supplements": [
-            { id: 38, name: "Collagen Capsules", price: 2500, image: "static/products/supplements/collagen capsules.jpeg" },
+            { id: 38, name: "Extra White Collagen ", price: 2500, image: "static/products/supplements/ultra-white.png" },
+            { id: 34, name: "Booster Whitening ", price: 2500, image: "static/products/supplements/booster-whitening.jpeg" },
+            { id: 35, name: "Call Me White", price: 2500, image: "static/products/supplements/callmewhite.png" },
+            { id: 43, name: "Glucenta Diamond", price: 2500, image: "static/products/supplements/Glucenta.jpeg" },
+            { id: 44, name: "5D Gluta", price: 2500, image: "static/products/supplements/gluta-powder.jpeg" },
+            { id: 45, name: "GlutaX ", price: 2500, image: "static/products/supplements/glutax.jpeg" },
+            { id: 46, name: "GlutaTX Boost Capsules", price: 2500, image: "static/products/supplements/glutaX.jpeg" },
+            { id: 47, name: "Milky Berries", price: 2500, image: "static/products/supplements/milky-berries.jpeg" },
+            { id: 48, name: "Miracle White", price: 2500, image: "static/products/supplements/miracle-white.jpeg" },
+            { id: 49, name: "Next-Gen Peptide Capsules", price: 2500, image: "static/products/supplements/peptide-capsules.jpeg" },
+
         ],
 
         "Special Offer Products": [
