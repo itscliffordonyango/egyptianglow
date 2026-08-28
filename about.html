@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | EgyptianGlow</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | EgyptianGlow</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script src="https://unpkg.com/feather-icons"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -23,137 +28,768 @@
       }
     }
   </script>
+
 </head>
+
 <body class="font-sans bg-white text-glow-dark">
 
   <!-- Navbar -->
+
   <nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
-        <div class="text-2xl font-serif font-semibold text-glow-dark">EgyptianGlow</div>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-center space-x-4">
-            <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Home</a>
-            <a href="shop.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Shop</a>
-            <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">About</a>
-            <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">Contact</a>
-            <a href="cart2.html" class="relative p-2 rounded-full bg-glow-pink">
-              <i data-feather="shopping-cart"></i>
-              <span id="cart-count" class="absolute -top-1 -right-1 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
-            </a>
-          </div>
-        </div>
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-glow-pink">
-            <i data-feather="menu"></i>
-          </button>
-        </div>
+
+
+    <!-- Logo -->
+    <div class="text-2xl font-serif font-semibold text-glow-dark">
+      EgyptianGlow
+    </div>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:block">
+      <div class="ml-10 flex items-center space-x-4">
+
+        <a href="index.html"
+          class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">
+          Home
+        </a>
+
+        <a href="shop.html"
+          class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">
+          Shop
+        </a>
+
+        <a href="about.html"
+          class="px-3 py-2 rounded-md text-sm font-medium bg-glow-pink">
+          About
+        </a>
+
+        <a href="contact.html"
+          class="px-3 py-2 rounded-md text-sm font-medium hover:bg-glow-pink">
+          Contact
+        </a>
+
+        <a href="cart2.html"
+          class="relative p-2 rounded-full bg-glow-pink">
+
+          <i data-feather="shopping-cart"></i>
+
+          <span id="cart-count"
+            class="absolute -top-1 -right-1 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">
+            0
+          </span>
+
+        </a>
+
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Home</a>
-        <a href="shop.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Shop</a>
-        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">About</a>
-        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">Contact</a>
-        <a href="cart2.html" class="block px-3 py-2 rounded-md text-base font-medium bg-glow-pink flex items-center">
-          Cart <span id="mobile-cart-count" class="ml-2 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
-        </a>
-      </div>
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center">
+      <button
+        id="mobile-menu-button"
+        class="p-2 rounded-md hover:bg-glow-pink"
+        aria-label="Open menu">
+
+        <i data-feather="menu"></i>
+
+      </button>
     </div>
+
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+
+  <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+
+    <a href="index.html"
+      class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">
+      Home
+    </a>
+
+    <a href="shop.html"
+      class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">
+      Shop
+    </a>
+
+    <a href="about.html"
+      class="block px-3 py-2 rounded-md text-base font-medium bg-glow-pink">
+      About
+    </a>
+
+    <a href="contact.html"
+      class="block px-3 py-2 rounded-md text-base font-medium hover:bg-glow-pink">
+      Contact
+    </a>
+
+    <a href="cart2.html"
+      class="block px-3 py-2 rounded-md text-base font-medium bg-glow-pink flex items-center">
+
+      Cart
+
+      <span id="mobile-cart-count"
+        class="ml-2 bg-glow-gold text-xs w-5 h-5 flex items-center justify-center rounded-full">
+        0
+      </span>
+
+    </a>
+
+  </div>
+</div>
+
+
   </nav>
 
-  <!-- About Section -->
-  <section class="py-16 text-center max-w-3xl mx-auto px-6">
-    <h1 class="text-3xl font-serif font-semibold text-glow-dark mb-6">Our Story</h1>
-    <p class="text-gray-700 mb-6 leading-relaxed">
-      EgyptianGlow was founded in Kenya with one mission: to help women feel confident in their own natural beauty.  
-      Our products are carefully curated to provide glowing, radiant skin — because every woman deserves to shine beautifully.
-    </p>
-    <p class="text-gray-700 leading-relaxed">
-      We believe in affordable luxury, high quality, and genuine self-care.  
-      Whether you shop online or visit our pickup point in Nairobi’s CBD, we’re always ready to help you glow!
-    </p>
+  <!-- Hero Section -->
+
+  <section class="bg-glow-pink py-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+
+  <p class="uppercase tracking-[0.25em] text-sm font-medium mb-4">
+    About EgyptianGlow
+  </p>
+
+  <h1 class="text-4xl md:text-6xl font-serif font-semibold mb-6">
+    Beauty Rooted in Science & Heritage
+  </h1>
+
+  <p class="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
+    Premium skincare thoughtfully formulated to support healthy,
+    radiant and naturally beautiful skin.
+  </p>
+
+</div>
+
+
   </section>
 
-<footer class="bg-glow-dark text-white py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="font-serif text-xl mb-4">EgyptianGlow</h3>
-          <p class="text-sm opacity-80">Natural beauty products for your radiant glow</p>
-        </div>
-        <div>
-          <h4 class="font-serif mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="text-sm opacity-80 hover:opacity-100">Home</a></li>
-            <li><a href="shop.html" class="text-sm opacity-80 hover:opacity-100">Shop</a></li>
-            <li><a href="index.html#about" class="text-sm opacity-80 hover:opacity-100">About</a></li>
-            <li><a href="index.html#contact" class="text-sm opacity-80 hover:opacity-100">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-serif mb-4">Connect With Us</h4>
-          <div class="flex space-x-4">
-            <a href="https://www.instagram.com/skincare_healthtipskenya/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+  <!-- About EgyptianGlow -->
 
-                            <i data-feather="instagram"></i>
-
-                        </a>
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
 
 
-          <!-- TikTok -->
-                      <a href="https://www.tiktok.com/"
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         aria-label="TikTok"
-                         class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
-                         
-                         <svg xmlns="http://www.w3.org/2000/svg"
-                         width="22"
-                         height="22"
-                         viewBox="0 0 24 24"
-                         fill="currentColor">
-                         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.77V2h-3.52v13.2a2.88 2.88 0 1 1-2.88-2.88c.3 0 .59.05.86.13V8.87a6.4 6.4 0 0 0-.86-.06A6.4 6.4 0 1 0 15.82 15V8.41a8.35 8.35 0 0 0 3.77.9V5.8z"/>
-                        </svg>
-                      </a>
+  <div class="grid md:grid-cols-2 gap-12 items-center">
 
+    <!-- Text -->
+    <div>
 
+      <p class="text-sm uppercase tracking-widest font-medium mb-3">
+        Who We Are
+      </p>
 
-                        <a href="#"
-                           class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6">
+        About Egyptian Glow
+      </h2>
 
-                            <i data-feather="twitter"></i>
+      <p class="text-gray-700 leading-relaxed mb-5">
+        <strong>Egyptian Glow</strong> is a premium skincare brand dedicated
+        to formulating safe, reliable, and highly effective solutions that
+        promote long-term skin health.
+      </p>
 
-                        </a>
+      <p class="text-gray-700 leading-relaxed mb-5">
+        Founded by head formulator <strong>Wendy</strong>, the company
+        combines advanced cosmetic science with time-honored natural
+        ingredients to help restore and maintain the skin's radiant,
+        natural barrier.
+      </p>
 
-          </div>
-        </div>
-      </div>
-      <div class="border-t border-white border-opacity-20 mt-8 pt-6 text-sm text-center opacity-70">
-        <p>&copy; 2023 EgyptianGlow. All rights reserved.</p>
-      </div>
+      <p class="text-gray-700 leading-relaxed">
+        Our brand is built on a foundation of absolute transparency,
+        scientific integrity, and uncompromised quality. Every product
+        in our portfolio undergoes rigorous testing and personal
+        verification to ensure it delivers optimal efficacy and safety
+        for our clients.
+      </p>
+
     </div>
+
+    <!-- Highlight Card -->
+    <div class="bg-glow-pink rounded-2xl p-8 md:p-10">
+
+      <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6">
+        <i data-feather="heart" class="w-7 h-7"></i>
+      </div>
+
+      <h3 class="text-2xl font-serif font-semibold mb-4">
+        Our Commitment
+      </h3>
+
+      <p class="text-gray-700 leading-relaxed">
+        We believe skincare should be more than a beauty routine.
+        It should be a thoughtful investment in the health, confidence,
+        and long-term wellbeing of your skin.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+  <!-- Heritage Section -->
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+
+
+  <div class="max-w-4xl mx-auto text-center">
+
+    <p class="text-sm uppercase tracking-widest font-medium mb-3">
+      Our Heritage
+    </p>
+
+    <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6">
+      The Heritage Behind Our Formulations
+    </h2>
+
+    <p class="text-gray-700 leading-relaxed mb-6">
+      The name <strong>Egyptian Glow</strong> reflects our commitment to
+      sourcing exceptional, high-performance ingredients. Driven by a
+      vision to harness legendary, time-tested beauty traditions, the
+      company established a direct and trusted partnership with
+      specialized suppliers in Cairo, Egypt.
+    </p>
+
+    <p class="text-gray-700 leading-relaxed">
+      We directly import premium, authentic herbs, botanical oils, and
+      specialized formulation powders from Cairo. These globally sourced
+      ingredients are carefully blended by our formulation experts into
+      advanced, handcrafted skincare products designed to deliver
+      exceptional radiance.
+    </p>
+
+  </div>
+
+
+  <!-- Heritage Highlights -->
+  <div class="grid sm:grid-cols-3 gap-6 mt-12">
+
+    <div class="bg-white rounded-2xl p-7 text-center shadow-sm">
+
+      <div class="w-12 h-12 bg-glow-pink rounded-full flex items-center justify-center mx-auto mb-5">
+        <i data-feather="globe" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="font-serif text-xl font-semibold mb-2">
+        Global Sourcing
+      </h3>
+
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Carefully selected ingredients sourced through trusted
+        international partnerships.
+      </p>
+
+    </div>
+
+
+    <div class="bg-white rounded-2xl p-7 text-center shadow-sm">
+
+      <div class="w-12 h-12 bg-glow-pink rounded-full flex items-center justify-center mx-auto mb-5">
+        <i data-feather="leaf" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="font-serif text-xl font-semibold mb-2">
+        Natural Ingredients
+      </h3>
+
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Authentic herbs and botanical ingredients inspired by
+        time-tested beauty traditions.
+      </p>
+
+    </div>
+
+
+    <div class="bg-white rounded-2xl p-7 text-center shadow-sm">
+
+      <div class="w-12 h-12 bg-glow-pink rounded-full flex items-center justify-center mx-auto mb-5">
+        <i data-feather="award" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="font-serif text-xl font-semibold mb-2">
+        Quality First
+      </h3>
+
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Products developed with careful formulation, testing,
+        and attention to quality.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+  <!-- Philosophy Section -->
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+
+  <p class="text-sm uppercase tracking-widest font-medium mb-3">
+    What We Believe
+  </p>
+
+  <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-8">
+    Our Philosophy
+  </h2>
+
+  <div class="max-w-3xl mx-auto">
+
+    <p class="text-gray-700 text-lg leading-relaxed mb-7">
+      At Egyptian Glow, we believe that sustainable skin transformation
+      requires patience, dedication, and precision.
+    </p>
+
+    <p class="text-gray-700 leading-relaxed mb-8">
+      Guided by the principle,
+      <em class="font-serif text-xl text-glow-dark">
+        "He makes all things beautiful in His time,"
+      </em>
+      we focus on creating skincare solutions designed to enhance your
+      complexion while respecting and protecting the skin's natural
+      barrier.
+    </p>
+
+    <div class="border-l-4 border-glow-gold bg-glow-pink rounded-r-xl p-6 text-left">
+
+      <p class="text-gray-700 leading-relaxed">
+        Our approach is centered on consistent care rather than overnight
+        promises. We believe beautiful skin is built through the right
+        products, proper routines, patience, and an understanding of
+        what your skin truly needs.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+  <!-- Quality & Transparency -->
+
+  <section class="py-16 bg-glow-dark text-white">
+
+
+<div class="max-w-6xl mx-auto px-6">
+
+  <div class="text-center max-w-3xl mx-auto mb-12">
+
+    <p class="text-sm uppercase tracking-widest opacity-80 mb-3">
+      Why EgyptianGlow
+    </p>
+
+    <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-5">
+      Transparency. Science. Quality.
+    </h2>
+
+    <p class="opacity-80 leading-relaxed">
+      Our commitment to our clients goes beyond the products themselves.
+      We strive to provide skincare that is thoughtfully formulated,
+      carefully handled, and backed by a genuine commitment to quality.
+    </p>
+
+  </div>
+
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="text-center">
+
+      <div class="w-14 h-14 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-5">
+        <i data-feather="shield-check" class="w-7 h-7"></i>
+      </div>
+
+      <h3 class="font-serif text-xl mb-3">
+        Safety
+      </h3>
+
+      <p class="text-sm opacity-80 leading-relaxed">
+        We prioritize the safety and wellbeing of our clients through
+        careful product development and verification.
+      </p>
+
+    </div>
+
+
+    <div class="text-center">
+
+      <div class="w-14 h-14 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-5">
+        <i data-feather="flask-conical" class="w-7 h-7"></i>
+      </div>
+
+      <h3 class="font-serif text-xl mb-3">
+        Formulation
+      </h3>
+
+      <p class="text-sm opacity-80 leading-relaxed">
+        Our formulations bring together cosmetic science and carefully
+        selected natural ingredients.
+      </p>
+
+    </div>
+
+
+    <div class="text-center">
+
+      <div class="w-14 h-14 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-5">
+        <i data-feather="check-circle" class="w-7 h-7"></i>
+      </div>
+
+      <h3 class="font-serif text-xl mb-3">
+        Integrity
+      </h3>
+
+      <p class="text-sm opacity-80 leading-relaxed">
+        We believe our clients deserve honest information, dependable
+        products, and uncompromised quality.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+  <!-- Corporate Overview -->
+
+  <section class="py-16 md:py-20">
+
+
+<div class="max-w-5xl mx-auto px-6">
+
+  <div class="text-center mb-12">
+
+    <p class="text-sm uppercase tracking-widest font-medium mb-3">
+      Corporate Overview
+    </p>
+
+    <h2 class="text-3xl md:text-4xl font-serif font-semibold">
+      EgyptianGlow
+    </h2>
+
+  </div>
+
+
+  <div class="grid sm:grid-cols-3 gap-6">
+
+    <!-- Headquarters -->
+    <div class="border border-gray-100 rounded-2xl p-7 text-center shadow-sm">
+
+      <div class="w-12 h-12 bg-glow-pink rounded-full flex items-center justify-center mx-auto mb-5">
+        <i data-feather="map-pin" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="font-serif text-xl font-semibold mb-2">
+        Headquarters
+      </h3>
+
+      <p class="text-gray-600">
+        Nairobi, Kenya
+      </p>
+
+    </div>
+
+
+    <!-- Instagram -->
+    <div class="border border-gray-100 rounded-2xl p-7 text-center shadow-sm">
+
+      <div class="w-12 h-12 bg-glow-pink rounded-full flex items-center justify-center mx-auto mb-5">
+        <i data-feather="instagram" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="font-serif text-xl font-semibold mb-2">
+        Instagram
+      </h3>
+
+      <a
+        href="https://www.instagram.com/skincare_healthtipskenya/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-glow-dark hover:underline">
+        @skincare_healthtipskenya
+      </a>
+
+    </div>
+
+
+    <!-- Hours -->
+    <div class="border border-gray-100 rounded-2xl p-7 text-center shadow-sm">
+
+      <div class="w-12 h-12 bg-glow-pink rounded-full flex items-center justify-center mx-auto mb-5">
+        <i data-feather="clock" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="font-serif text-xl font-semibold mb-2">
+        Opening Hours
+      </h3>
+
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Monday – Saturday<br>
+        9:00 AM – 6:00 PM
+      </p>
+
+      <p class="text-gray-500 text-sm mt-1">
+        Sunday: Closed
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+  <!-- Call To Action -->
+
+  <section class="bg-glow-pink py-16">
+
+
+<div class="max-w-4xl mx-auto px-6 text-center">
+
+  <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-5">
+    Ready to Begin Your Glow Journey?
+  </h2>
+
+  <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed mb-8">
+    Discover our collection of thoughtfully formulated skincare products
+    and find the right additions to your skincare routine.
+  </p>
+
+  <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+    <a
+      href="shop.html"
+      class="inline-flex items-center justify-center px-7 py-3 bg-glow-dark text-white rounded-full font-medium hover:opacity-90 transition">
+
+      Shop Our Products
+
+      <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+
+    </a>
+
+    <a
+      href="contact.html"
+      class="inline-flex items-center justify-center px-7 py-3 bg-white text-glow-dark rounded-full font-medium hover:bg-gray-50 transition">
+
+      Contact Us
+
+    </a>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="bg-glow-dark text-white py-8">
+
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Brand -->
+    <div>
+
+      <h3 class="font-serif text-xl mb-4">
+        EgyptianGlow
+      </h3>
+
+      <p class="text-sm opacity-80">
+        Premium skincare inspired by nature, heritage,
+        and thoughtful formulation.
+      </p>
+
+    </div>
+
+
+    <!-- Quick Links -->
+    <div>
+
+      <h4 class="font-serif mb-4">
+        Quick Links
+      </h4>
+
+      <ul class="space-y-2">
+
+        <li>
+          <a
+            href="index.html"
+            class="text-sm opacity-80 hover:opacity-100">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="shop.html"
+            class="text-sm opacity-80 hover:opacity-100">
+            Shop
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="about.html"
+            class="text-sm opacity-80 hover:opacity-100">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="contact.html"
+            class="text-sm opacity-80 hover:opacity-100">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- Social -->
+    <div>
+
+      <h4 class="font-serif mb-4">
+        Connect With Us
+      </h4>
+
+      <div class="flex space-x-4">
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/skincare_healthtipskenya/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+
+          <i data-feather="instagram"></i>
+
+        </a>
+
+
+        <!-- TikTok -->
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20">
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor">
+
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.77V2h-3.52v13.2a2.88 2.88 0 1 1-2.88-2.88c.3 0 .59.05.86.13V8.87a6.4 6.4 0 0 0-.86-.06A6.4 6.4 0 1 0 15.82 15V8.41a8.35 8.35 0 0 0 3.77.9V5.8z"/>
+
+          </svg>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Copyright -->
+  <div class="border-t border-white border-opacity-20 mt-8 pt-6 text-sm text-center opacity-70">
+
+    <p>
+      &copy; 2026 EgyptianGlow. All rights reserved.
+    </p>
+
+  </div>
+
+</div>
+
+
   </footer>
 
-
+  <!-- Scripts -->
 
   <script>
+
+    // Feather Icons
     feather.replace();
-    document.getElementById('mobile-menu-button').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+
+
+    // Mobile Menu
+    document
+      .getElementById('mobile-menu-button')
+      .addEventListener('click', () => {
+
+        document
+          .getElementById('mobile-menu')
+          .classList
+          .toggle('hidden');
+
+      });
+
+
+    // Cart Count
     const updateCartCount = () => {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const count = cart.reduce((t, i) => t + (i.quantity || 1), 0);
-      document.getElementById('cart-count').textContent = count;
-      document.getElementById('mobile-cart-count').textContent = count;
+
+      const cart =
+        JSON.parse(localStorage.getItem('cart')) || [];
+
+      const count =
+        cart.reduce(
+          (total, item) => total + (item.quantity || 1),
+          0
+        );
+
+      const cartCount =
+        document.getElementById('cart-count');
+
+      const mobileCartCount =
+        document.getElementById('mobile-cart-count');
+
+      if (cartCount) {
+        cartCount.textContent = count;
+      }
+
+      if (mobileCartCount) {
+        mobileCartCount.textContent = count;
+      }
+
     };
+
+
     updateCartCount();
+
   </script>
+
 </body>
 </html>
