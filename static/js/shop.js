@@ -33,41 +33,44 @@ document.addEventListener("DOMContentLoaded", () => {
             "Oils & Creams ": [
                 { id: 12, name: "Cleopatra Body Oil", price: 2000, image: "static/products/body/cleopatra oil.jpeg" },
                 { id: 13, name: "Timeless Glow  Oil", price: 2000, image: "static/products/body/timeless.jpeg" },
-                { id: 14, name: "Skin Defence Body Cream", price: 2000, image: "static/products/body/body oil.jpeg" },
+                { id: 14, name: "Skin Defence Body Cream", price: 2000, image: "static/products/body/skinfidence.jpeg" },
             ],
             "Lotions": [
                 { id: 15, name: "Queen of White Lotion", price: 4800, image: "static/products/body/Queen of White.jpeg" },
                 { id: 16, name: "Advanced Caramel Lotion", price: 4800, image: "static/products/body/Advanced Caramel.jpeg" },
                 { id: 17, name: "Body Lightening Lotion", price: 3500, image: "static/products/body/body-lightening lotion.png" },
                 { id: 18, name: "Caramel Lotion", price: 3500, image: "static/products/body/Caramel lotion.png" },
-                { id: 19, name: "Duches White Lotion", price: 5000, image: "static/products/body/pigment lotion.jpeg" },
+                { id: 19, name: "Duches White Lotion", price: 5000, image: "static/products/body/duches-white.jpeg" },
                 { id: 20, name: "Celebtirty Whitening Lotion", price: 4500, image: "static/products/body/celeb.png" },
                 { id: 21, name: "Pro 9 Lotion", price: 4500, image: "static/products/body/Pro 9.jpeg" },
-                { id: 22, name: "Half Cast Lotion", price: 3500, image: "static/products/body/half-cast.png" },
+                { id: 22, name: "Radiance Half Cast Lotion", price: 3500, image: "static/products/body/half-cast.png" },
+                { id: 42, name: "White-dots Lotion", price: 2000, image: "static/products/body/white-dots.jpeg" },
             ],
             "Scrubs": [
                 { id: 23, name: "Exfoliating Body Scrub", price: 2000, image: "static/products/body/body scrub.jpeg" },
             ],
             "Soaps ": [
-                { id: 24, name: "VVIP Soap", price: 3000, image: "static/products/body/body soap.jpeg" },
-                { id: 25, name: "Advanced Snow White", price: 2000, image: "satic/products/body scrub.jpeg" },
-                { id: 26, name: "Molato 7D ", price: 2000, image: "static/products/soaps/molato-pink.png" },
-                { id: 27, name: "Morrocan Nila Lightening Soap 300 Grams", price: 2500, image: "static/products/soaps/morrocan.jpeg" },
-                { id: 28, name: "Morrocan Nila Lightening Soap 500 Grams", price: 3500, image: "static/products/soaps/morrocan.jpeg" }, 
-                { id: 29, name: "Oshaprapra Lightening Soap", price: 2500, image: "static/products/soaps/oshap.jpeg" },          
+                { id: 24, name: "VVIP Soap", price: 3000, image: "static/products/soaps/VVIP.jpeg" },
+                { id: 25, name: "Advanced Snow White", price: 2000, image: "static/products/soaps/snow2.png" },
+                { id: 26, name: "Molato 7D ", price: 2000, image: "static/products/soaps/molato 2.png" },
+                { id: 27, name: "Morrocan Nila Lightening Soap 300 Grams", price: 2500, image: "static/products/soaps/nila300g.png" },
+                { id: 28, name: "Morrocan Nila Lightening Soap 500 Grams", price: 3500, image: "static/products/soaps/nila500g.png" }, 
+                { id: 29, name: "Oshaprapra Lightening Soap", price: 2500, image: "static/products/soaps/oshap.jpeg" },
+                        
             ],
             "Body Washes": [
                 { id: 30, name: "Pigment Correcting Body Wash", price: 850, image: "static/products/body/pigment.jpeg" },
-                { id: 31, name: "Raspbery Glitz Lightening Shower Gel", price: 2000, image: "static/products/body/body-wash.jpeg" },  
+                { id: 31, name: "Raspbery Glitz Lightening Shower Gel", price: 2000, image: "static/products/soaps/glitz.jpeg" }, 
+                { id: 41, name: "Polish White Shower Gel", price: 2000, image: "static/products/soaps/Polish White.jpeg" },
             ]
         },
 
         "Hand & Foot Products": [
-            { id: 32, name: "Green Oil", price: 2500, image: "static/products/hand/pyramid hand cream.jpeg" },
+            { id: 32, name: "Green Oil", price: 2500, image: "static/products/body/green-oil.jpeg" },
             { id: 33, name: "Pink Knuckle Serum", price: 1000, image: "static/products/hand/pyramid lip balm.jpeg" },
             { id: 34, name: "Orange Knuckle Cream", price: 1500, image: "static/products/hand/pyramid hand cream.jpeg" },
             { id: 35, name: "Green Knuckle Cream", price: 1500, image: "static/products/hand/pyramid hand cream.jpeg" },
-            { id: 36, name: "Instant Clarifying Knuckle Serum", price: 2500, image: "static/products/hand/pyramid hand cream.jpeg" },
+            { id: 36, name: "Instant Clarifying Knuckle Serum", price: 2500, image: "static/products/serums/knuckle-clarifying-serum.jpeg" },
             { id: 37, name: "Hand and Foot Cream", price: 2000, image: "static/products/hand/pyramid hand cream.jpeg" },
         ],
 
