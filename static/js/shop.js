@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 id: 7,
                 name: "Pink Lip Cream",
                 price: 1000,
-                image: "static/products/face/Advancedwhyte face cream.jpeg"
+                image: "static/products/face/pink-lips.jpeg"
             }
         ],
 
