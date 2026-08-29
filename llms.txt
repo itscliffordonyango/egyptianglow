@@ -1,0 +1,77 @@
+# EgyptianGlow
+
+EgyptianGlow is a skincare and beauty products brand serving customers in Kenya.
+
+## Website
+
+https://egyptian-glow.netlify.app/
+
+## Main Pages
+
+- Homepage: https://egyptian-glow.netlify.app/
+- Shop: https://egyptian-glow.netlify.app/shop.html
+- About: https://egyptian-glow.netlify.app/about.html
+- Contact: https://egyptian-glow.netlify.app/contact.html
+
+## Products
+
+EgyptianGlow offers skincare and beauty products including:
+
+- Face creams
+- Face oils
+- Face products
+- Serums
+- Body lotions
+- Body oils
+- Body creams
+- Body scrubs
+- Soaps
+- Body washes
+- Hand and foot products
+- Beauty supplements
+
+## Product Categories
+
+### Face Products
+
+EgyptianGlow offers a range of face creams, face oils and other facial skincare products.
+
+### Serums
+
+The serum range includes daytime serums, redness-focused serums, hydrolipidic serums and booster serums.
+
+### Body Products
+
+Body products include lotions, body oils, body creams, scrubs, soaps and body washes.
+
+### Hand & Foot Products
+
+Products include knuckle care products, hand and foot care products and clarifying serums.
+
+### Supplements
+
+The website offers a selection of beauty and whitening supplements.
+
+### Special Offers
+
+Special offers include selected skincare products and wholesale products.
+
+## Customer Service
+
+Customers can use the contact options provided on the website to enquire about products, orders, availability and other services.
+
+## Location and Delivery
+
+EgyptianGlow serves customers in Kenya, with Nairobi pickup and countrywide delivery.
+
+## Important
+
+Product prices, availability, descriptions and stock status should always be verified from the current EgyptianGlow website.
+
+The website is the authoritative source for current product information.
+
+## Contact
+
+For current contact and ordering information, visit:
+
+https://egyptian-glow.netlify.app/contact.html
