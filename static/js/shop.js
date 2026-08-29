@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     id: 23,
                     name: "Exfoliating Body Scrub",
                     price: 2000,
-                    image: "static/products/body/body scrub.jpeg"
+                    image: "static/products/body/scrub.jpeg"
                 }
             ],
 
@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 id: 46,
                 name: "GlutaTX Boost Capsules",
                 price: 6800,
-                image: "static/products/supplements/glutaX.jpeg"
+                image: "static/products/supplements/glutaboost.jpeg"
             },
             {
                 id: 47,
@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 id: 40,
                 name: "Deep Tissue Peeling Solution",
-                price: 1200,
+                price: 2000,
                 image: "static/products/body/deep tissue peels.jpeg"
             },
 
