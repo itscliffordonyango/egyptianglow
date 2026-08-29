@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     id: 14,
                     name: "Skin Defence Body Cream",
-                    price: 2000,
+                    price: 3500,
                     image: "static/products/body/skinfidence.jpeg"
                 }
             ],
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     id: 30,
                     name: "Pigment Correcting Body Wash",
-                    price: 850,
+                    price: 2000,
                     image: "static/products/body/pigment.jpeg"
                 },
                 {
